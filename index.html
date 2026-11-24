@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Ujjwal Kumar — Video Editor</title><meta name="description" content="Selected video editing work by Ujjwal Kumar."><meta property="og:title" content="Ujjwal Kumar — Video Editor"><meta property="og:description" content="A selection of short-form video editing work by Ujjwal Kumar."><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image"><meta property="og:image" content="/__l5e/assets-v1/e86aee9a-c046-481a-adb6-e7c5f8749870/profile.jpg"><meta name="twitter:image" content="/__l5e/assets-v1/e86aee9a-c046-481a-adb6-e7c5f8749870/profile.jpg"><style>:root { --font-sans: Arial, Helvetica, sans-serif; --font-display: Arial, Helvetica, sans-serif; }
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Ujjwal Kumar — Video Editor</title><meta name="description" content="Selected video editing work by Ujjwal Kumar."><meta property="og:title" content="Ujjwal Kumar — Video Editor"><meta property="og:description" content="A selection of short-form video editing work by Ujjwal Kumar."><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image"><meta property="og:image" content="/__l5e/assets-v1/e86aee9a-c046-481a-adb6-e7c5f8749870/profile.jpg"><meta name="twitter:image" content="/__l5e/assets-v1/e86aee9a-c046-481a-adb6-e7c5f8749870/profile.jpg"><link rel="preconnect" href="https://www.youtube-nocookie.com"><link rel="preconnect" href="https://i.ytimg.com"><style>:root { --font-sans: Arial, Helvetica, sans-serif; --font-display: Arial, Helvetica, sans-serif; }
 * { box-sizing: border-box; }
 :root, .dark {
   --radius: 0.5rem;
@@ -127,10 +127,7 @@
         iframe.referrerPolicy = "strict-origin-when-cross-origin";
         iframe.allowFullscreen = true;
         frame.appendChild(iframe);
-        // YouTube flashes its channel name and Shorts mark over the first
-        // moments of playback, so the picture stays on top until that passes.
-        window.setTimeout(() => button.classList.add("is-fading"), 5000);
-        window.setTimeout(() => button.remove(), 5700);
+        iframe.addEventListener("load", () => button.remove());
       });
       frame.appendChild(button);
       const article = document.createElement("article");
