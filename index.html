@@ -106,10 +106,10 @@
       button.className = "video-thumb";
       button.setAttribute("aria-label", `Play short ${String(index + 1).padStart(2, "0")}`);
       const img = document.createElement("img");
-      img.src = `https://i.ytimg.com/vi/${id}/oardefault.jpg`;
+      img.src = `your-image.png`;
       img.alt = "";
       img.loading = "lazy";
-      img.onerror = () => { img.onerror = null; img.src = `https://i.ytimg.com/vi/${id}/hqdefault.jpg`; };
+      img.onerror = () => { img.onerror = null; img.src = `your-image.png`; };
       button.appendChild(img);
       button.addEventListener("click", () => {
         // Opened straight from disk, YouTube refuses to play inside the page,
